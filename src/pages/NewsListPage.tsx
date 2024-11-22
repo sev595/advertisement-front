@@ -18,6 +18,7 @@ export default function NewsListPage() {
       setLoading(true);
       try {
         const data = await fetchNews(currentPage, searchQuery);
+        
         setNews(data);
       } catch (error) {
         console.error('Failed to fetch news:', error);
@@ -40,7 +41,7 @@ export default function NewsListPage() {
       </div>
     );
   }
-
+  
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

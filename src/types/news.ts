@@ -5,6 +5,11 @@ export interface NewsItem {
   content: string;
   imageUrl: string;
   date: string;
+  createdDate:string;
+  subTitle:string;
+  mainImage:{
+    url:string
+  }
 }
 
 export interface NewsResponse {
