@@ -1,4 +1,3 @@
-import { mockNews } from '../data/mockNews';
 import type { NewsResponse } from '../types/news';
 
 // const ITEMS_PER_PAGE = 3;
@@ -79,9 +78,12 @@ export async function fetchNews(page: number, search: string): Promise<NewsRespo
 
 export async function fetchNewsById(id: string): Promise<NewsResponse['data'][0] | null> {
   // Simulate API delay
-
-  await new Promise(resolve => setTimeout(resolve, 800));
+  console.log(id);
   
-  const news = mockNews.find(item => item.id === parseInt(id));
-  return news || null;
+  const response = await fetch(`http://localhost:1337/api/all-posts/${id}?populate=*`);
+    if (!response.ok) {
+      throw new Error(`Error fetching news: ${response.statusText}`);
+    }
+    const apiData = await response.json();
+    return apiData.data
 }
