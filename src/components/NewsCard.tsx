@@ -6,8 +6,6 @@ interface NewsCardProps {
 }
 
 export default function NewsCard({ news }: NewsCardProps) {
-  console.log(news.mainImage.url);
-  
   return (
     <Link to={`/news/${news.documentId}`} className="group">
       <article className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:-translate-y-1">
