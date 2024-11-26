@@ -40,7 +40,8 @@ export default function NewsDetailPage() {
       </div>
       <div className="aspect-video mb-8 rounded-lg overflow-hidden">
         <img
-          src={`http://localhost:1337/${news.mainImage.url}`}
+          src={`${import.meta.env.VITE_API_URL}${news.mainImage?.url}`}
+          
           alt={news.title}
           className="w-full h-full object-cover"
         />
@@ -52,3 +53,5 @@ export default function NewsDetailPage() {
     </article>
   );
 }
+// view i  masy integrel 
+// lini 2 hat view real u unreal

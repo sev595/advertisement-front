@@ -6,7 +6,7 @@ interface ImageTypeProps {
 
 const ImageType = ({ item }: ImageTypeProps) => {
   return (
-    <img width="100%" src={item.url} alt="test" />
+    <img width="100%" src={item?.url} alt="test" />
   )
 }
 

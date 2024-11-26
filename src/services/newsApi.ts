@@ -1,63 +1,12 @@
 import type { NewsResponse } from '../types/news';
 
-// const ITEMS_PER_PAGE = 3;
-
-
-// const ITEMS_PER_PAGE = 10; // Adjust this based on your pagination needs
-
-// export async function fetchNews(page: number, search: string): Promise<NewsResponse> {
-//   console.log(page);
-  
-//   try {
-//     console.log(process.env);
-    
-//     // Fetch data from the API
-//     const response = await fetch(`http://localhost:1337/api/all-posts?populate=*`);
-//     if (!response.ok) {
-//       throw new Error(`Error fetching news: ${response.statusText}`);
-//     }
-
-//     const apiData = await response.json();
-//     console.log("apiData",search);
-    
-//     // Assuming the API returns an array of posts
-//     const filteredNews = apiData.data || [];
-
-//     // Apply search filter
-//     // if (search) {
-//     //   const searchLower = search.toLowerCase();
-//     //   filteredNews = filteredNews.filter(
-//     //     (news: { title: string; description: string }) =>
-//     //       news.title.toLowerCase().includes(searchLower) ||
-//     //       news.description.toLowerCase().includes(searchLower)
-//     //   );
-//     // }
-
-//     // Calculate pagination
-//     const totalItems = filteredNews.length;
-//     const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
-//     const startIndex = (page - 1) * ITEMS_PER_PAGE;
-//     const endIndex = startIndex + ITEMS_PER_PAGE;
-    
-//     return {
-//       data: filteredNews.slice(startIndex, endIndex),
-//       totalPages,
-//       currentPage: page
-//     };
-//   } catch (error) {
-//     console.error("Error fetching news:", error);
-//     throw error;
-//   }
-// }
-
 const ITEMS_PER_PAGE = 10; // Adjust this based on your pagination needs
 
 export async function fetchNews(page: number, search: string): Promise<NewsResponse> {
-  console.log(page);
-  
+
   try {
     // Build the query string with pagination and optional search
-    let queryString = `http://localhost:1337/api/all-posts?populate=*&pagination[page]=${page}&pagination[pageSize]=${ITEMS_PER_PAGE}`;
+    let queryString = `${import.meta.env.VITE_API_URL}api/all-posts?populate=*&pagination[page]=${page}&pagination[pageSize]=${ITEMS_PER_PAGE}`;
     
     // Add search functionality if provided
     if (search) {
@@ -92,7 +41,7 @@ export async function fetchNews(page: number, search: string): Promise<NewsRespo
 
 export async function fetchNewsById(id: string): Promise<NewsResponse['data'][0] | null> {
   // Simulate API delay
-  const response = await fetch(`http://localhost:1337/api/all-posts/${id}?populate=*`);
+  const response = await fetch(`${import.meta.env.VITE_API_URL}api/all-posts/${id}?populate=*`);
     if (!response.ok) {
       throw new Error(`Error fetching news: ${response.statusText}`);
     }
