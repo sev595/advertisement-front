@@ -1,3 +1,4 @@
+import { fetchData } from '../server/api';
 import type { NewsResponse } from '../types/news';
 
 const ITEMS_PER_PAGE = 10; // Adjust this based on your pagination needs
@@ -5,8 +6,10 @@ const ITEMS_PER_PAGE = 10; // Adjust this based on your pagination needs
 export async function fetchNews(page: number, search: string): Promise<NewsResponse> {
 
   try {
+  console.log(2222,import.meta.env.VITE_BARIER_TOKEN);
+
     // Build the query string with pagination and optional search
-    let queryString = `${import.meta.env.VITE_API_URL}api/all-posts?populate=*&pagination[page]=${page}&pagination[pageSize]=${ITEMS_PER_PAGE}`;
+    let queryString = `all-posts?populate=*&pagination[page]=${page}&pagination[pageSize]=${ITEMS_PER_PAGE}`;
     
     // Add search functionality if provided
     if (search) {
@@ -15,7 +18,8 @@ export async function fetchNews(page: number, search: string): Promise<NewsRespo
     }
     
     // Fetch data from the API
-    const response = await fetch(queryString);
+  const response = await fetchData(queryString)
+
     if (!response.ok) {
       throw new Error(`Error fetching news: ${response.statusText}`);
     }
@@ -41,8 +45,13 @@ export async function fetchNews(page: number, search: string): Promise<NewsRespo
 
 export async function fetchNewsById(id: string): Promise<NewsResponse['data'][0] | null> {
   // Simulate API delay
-  const response = await fetch(`${import.meta.env.VITE_API_URL}api/all-posts/${id}?populate=*`);
-    if (!response.ok) {
+
+  console.log(import.meta.env.VITE_BARIER_TOKEN);
+  
+  const queryString = `all-posts/${id}?populate=*`
+  const response =await fetchData(queryString)
+    
+  if (!response.ok) {
       throw new Error(`Error fetching news: ${response.statusText}`);
     }
     const apiData = await response.json();
