@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <circle cx="250" cy="250" r="200" fill="#ffcc66" />
+  <text x="50%" y="50%" text-anchor="middle" fill="#333" font-size="40" font-family="Arial, sans-serif" dy=".3em">
+    Time Info
+  </text>
+  <g transform="translate(250,250)">
+    <g transform="translate(-150,-150)">
+      <circle cx="150" cy="150" r="30" fill="#66ccff" />
+      <path d="M120 160 L180 160 L150 210 Z" fill="#ff6666" />
+      <rect x="220" y="20" width="40" height="40" rx="5" fill="#99cc99" />
+      <path d="M80 80 A70 70 0 1 1 80 81" stroke="#666" stroke-width="8" fill="none" />
+    </g>
+  </g>
+</svg>

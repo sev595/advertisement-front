@@ -1,12 +1,12 @@
-import { Github, Twitter, Linkedin } from 'lucide-react';
+// import { Github, Twitter, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">About NewsHub</h3>
+            <h3 className="text-lg font-semibold mb-4">About TimeInfo</h3>
             <p className="text-gray-400">
               Delivering the latest and most relevant news stories from around the globe.
             </p>
@@ -33,9 +33,9 @@ export default function Footer() {
               </a>
             </div>
           </div>
-        </div>
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>© {new Date().getFullYear()} NewsHub. All rights reserved.</p>
+        </div> */}
+        <div className="mt-8 pt-8 border-t border-gray-800 text-start text-gray-400">
+          <p>© {new Date().getFullYear()} TimeInfo. All rights reserved.</p>
         </div>
       </div>
     </footer>

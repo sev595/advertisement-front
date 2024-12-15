@@ -17,7 +17,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <Link to="/news" className="flex items-center space-x-2">
             <Newspaper className="h-8 w-8 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">NewsHub</span>
+            <span className="text-xl font-bold text-gray-900">TimeInfo</span>
           </Link>
           
           <form onSubmit={handleSearch} className="flex-1 max-w-lg mx-4">

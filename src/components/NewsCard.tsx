@@ -11,20 +11,20 @@ export default function NewsCard({ news }: NewsCardProps) {
       <article className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:-translate-y-1">
         <div className="aspect-video overflow-hidden">
           <img
-            src={`${import.meta.env.VITE_API_URL}${news.mainImage?.url}`}
-            alt={news.title}
+            src={`${import.meta.env.VITE_API_URL}${news?.mainImage?.url}`}
+            alt={news?.title}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
         <div className="p-4">
           <h2 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
-            {news.title}
+            {news?.title}
           </h2>
           <p className="text-gray-600 line-clamp-3">
-            {news.subTitle}
+            {news?.subTitle}
           </p>
           <div className="mt-4 text-sm text-gray-500">
-            {new Date(news.createdDate).toLocaleDateString()}
+            {new Date(news?.createdDate).toLocaleDateString()}
           </div>
         </div>
       </article>
