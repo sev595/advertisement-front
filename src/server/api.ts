@@ -5,8 +5,8 @@ export const fetchData = async (endpoint: string) => {
         headers: {
             'Authorization': `Bearer ${import.meta.env.VITE_BARIER_TOKEN}`, // Bearer token for authentication
             'Content-Type': 'application/json', // Ensures the server understands JSON
-            'Accept': 'application/json', // Specifies the response format expected
-            'X-Requested-With': 'XMLHttpRequest' // Sometimes required for CSRF protection
+            // 'Accept': 'application/json', // Specifies the response format expected
+            // 'X-Requested-With': 'XMLHttpRequest' // Sometimes required for CSRF protection
         }
     });
 
