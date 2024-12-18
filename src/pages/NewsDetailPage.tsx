@@ -31,17 +31,32 @@ export default function NewsDetailPage() {
 
   if (loading) return <Loading />
   if (!news) return <NewsNotFound />
+  console.log(news.view);
 
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">{news?.title}</h1>
-      <div className="text-gray-500 mb-8">
-        { new Date(news?.createdDate?news?.createdDate:"").toLocaleDateString()}
+      <div className="text-gray-500 mb-8 flex gap-4 ">
+        <div
+          style={{
+            borderRadius: "8px",
+            fontWeight: "bold",
+            fontSize: "16px",
+            color: "#333",
+          }}
+        >
+          Views {news.view}
+        </div>
+        <div>
+          {new Date(news?.createdDate ? news?.createdDate : "").toLocaleDateString()}
+
+        </div>
+
       </div>
       <div className="aspect-video mb-8 rounded-lg overflow-hidden">
         <img
           src={`${import.meta.env.VITE_API_URL}${news?.mainImage?.url}`}
-          
+
           alt={news?.title}
           className="w-full h-full object-cover"
         />

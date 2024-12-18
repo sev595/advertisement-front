@@ -11,6 +11,7 @@ export interface NewsItem {
   mainImage: {
     url: string
   }
+  view:string
   advertisement: string
 }
 
