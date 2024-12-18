@@ -53,5 +53,3 @@ export default function NewsDetailPage() {
     </article>
   );
 }
-// view i  masy integrel 
-// lini 2 hat view real u unreal
