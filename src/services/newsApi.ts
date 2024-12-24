@@ -27,7 +27,7 @@ export async function fetchNews(page: number, search: string): Promise<NewsRespo
     const apiData = await response.json();
     
     // Extract necessary pagination info
-    const data = apiData.data || [];
+    const data = apiData.data.reverse()|| [];
     const meta = apiData.meta?.pagination || { page: 1, pageCount: 1 };
 
     return {

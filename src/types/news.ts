@@ -12,7 +12,8 @@ export interface NewsItem {
     url: string
   }
   view:string
-  advertisement: string
+  advertisement: string,
+  cardImageUrl:string
 }
 
 export interface INewsDescription {
