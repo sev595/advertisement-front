@@ -15,9 +15,19 @@ const NewsDescription = ({ newsDescription }: NewsDescriptionProps) => {
       {
         formatedData.map((item: INewsDescription, index: number) => {
 
-          if (index === 2 || index === 5) return (
+          if (index === 2 ) return (
             <>
               <div data-type="_mgwidget" data-widget-id="1716823" style={{minHeight: "300px"}}>
+              </div>
+             {
+              (function(w,q){w[q] = w[q] || [];w[q].push(["_mgc.load"])})(window,"_mgq")
+             }
+            </>
+
+          )
+          if (index === 7 ) return (
+            <>
+              <div data-type="_mgwidget" data-widget-id="1716876" style={{minHeight: "300px"}}>
               </div>
              {
               (function(w,q){w[q] = w[q] || [];w[q].push(["_mgc.load"])})(window,"_mgq")
