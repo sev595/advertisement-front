@@ -15,7 +15,7 @@ const NewsDescription = ({ newsDescription }: NewsDescriptionProps) => {
       {
         formatedData.map((item: INewsDescription, index: number) => {
 
-          if (index === 1) return (
+          if (index === 2 || index === 5) return (
             <>
               <div data-type="_mgwidget" data-widget-id="1716823" style={{minHeight: "300px"}}>
               </div>
