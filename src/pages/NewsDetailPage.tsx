@@ -26,8 +26,8 @@ export default function NewsDetailPage() {
         setLoading(false);
       }
     };
-
     loadNewsDetail();
+
   }, [id]);
 
   if (loading) return <Loading />;
@@ -35,9 +35,16 @@ export default function NewsDetailPage() {
 
   const shareableLink = `${window.location.origin}/news/${id}`;
   const imageSrc = news?.cardImageUrl ? news?.cardImageUrl : `${import.meta.env.VITE_API_URL}${news?.mainImage?.url}`
- 
+
   return (
     <>
+
+      <div data-type="_mgwidget" data-widget-id="1716515">
+      </div>
+      {(function (w: string, q) { w[q] = w[q] || []; w[q].push(["_mgc.load"]) })(window, "_mgq")}
+
+
+
       {/* Open Graph Meta Tags for Facebook */}
       <Helmet>
         <title>{news?.title}</title>
