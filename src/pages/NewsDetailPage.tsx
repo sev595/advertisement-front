@@ -42,9 +42,6 @@ export default function NewsDetailPage() {
       <div data-type="_mgwidget" data-widget-id="1716515">
       </div>
       {(function (w: string, q) { w[q] = w[q] || []; w[q].push(["_mgc.load"]) })(window, "_mgq")}
-
-
-
       {/* Open Graph Meta Tags for Facebook */}
       <Helmet>
         <title>{news?.title}</title>
@@ -84,6 +81,10 @@ export default function NewsDetailPage() {
           <NewsDescription newsDescription={news?.description} />
         </div>
       </article>
+      <div data-type="_mgwidget" data-widget-id="1716828"> 
+ </div> 
+ {(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq")}
+ 
 
       {/* Optionally Log the Generated Shareable Link */}
       {console.log('Shareable Link for Facebook:', shareableLink)}
