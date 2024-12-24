@@ -35,7 +35,7 @@ export default function NewsDetailPage() {
 
   const shareableLink = `${window.location.origin}/news/${id}`;
   const imageSrc = news?.cardImageUrl ? news?.cardImageUrl : `${import.meta.env.VITE_API_URL}${news?.mainImage?.url}`
-
+  
   return (
     <>
 
@@ -76,18 +76,21 @@ export default function NewsDetailPage() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: news?.advertisement }}></div>
+        <div data-type="_mgwidget" data-widget-id="1716515">
+        </div>
+        {(function (w, q) { w[q] = w[q] || []; w[q].push(["_mgc.load"]) })(window, "_mgq")}
+
         <div className="prose prose-lg max-w-none">
           <NewsDescription newsDescription={news?.description} />
         </div>
       </article>
-      <div data-type="_mgwidget" data-widget-id="1716828"> 
- </div> 
- {(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq")}
- 
+      <div data-type="_mgwidget" data-widget-id="1716828">
+      </div>
+      {(function (w, q) { w[q] = w[q] || []; w[q].push(["_mgc.load"]) })(window, "_mgq")}
 
-      {/* Optionally Log the Generated Shareable Link */}
-      {console.log('Shareable Link for Facebook:', shareableLink)}
+      <div data-type="_mgwidget" data-widget-id="1716517">
+      </div>
+      {(function (w, q) { w[q] = w[q] || []; w[q].push(["_mgc.load"]) })(window, "_mgq")}
     </>
   );
 }
