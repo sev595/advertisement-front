@@ -78,7 +78,10 @@ export default function NewsDetailPage() {
         </div>
         <div data-type="_mgwidget" data-widget-id="1716515">
         </div>
-        {(function (w, q) { w[q] = w[q] || []; w[q].push(["_mgc.load"]) })(window, "_mgq")}
+
+<script async="async" data-cfasync="false" src="//pl25668362.profitablecpmrate.com/894e73c9cfdd621e54ce14132c876c9a/invoke.js"></script>
+<div id="container-894e73c9cfdd621e54ce14132c876c9a"></div>
+        {/* {(function (w, q) { w[q] = w[q] || []; w[q].push(["_mgc.load"]) })(window, "_mgq")} */}
 
         <div className="prose prose-lg max-w-none">
           <NewsDescription newsDescription={news?.description} />
