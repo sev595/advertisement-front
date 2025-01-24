@@ -78,10 +78,10 @@ export default function NewsDetailPage() {
         </div>
         <div data-type="_mgwidget" data-widget-id="1716515">
         </div>
-
+111
         <div id="container-894e73c9cfdd621e54ce14132c876c9a"></div>
         {/* {(function (w, q) { w[q] = w[q] || []; w[q].push(["_mgc.load"]) })(window, "_mgq")} */}
-
+111
         <div className="prose prose-lg max-w-none">
           <NewsDescription newsDescription={news?.description} />
         </div>
